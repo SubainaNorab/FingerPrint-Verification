@@ -17,10 +17,10 @@ Matches are determined by calculating the dot product between a live "test" embe
 The system includes an evaluation tool (one.py) to test various sensitivity levels (from 0.6 to 0.9) to find the perfect balance between security and user convenience.
 
 ## Project Structure
-* **`models.py`**: The "Brain" – Loads the MobileOne model and handles image-to-tensor conversion.
-* **`datasets.py`**: The "Enrollment" – Processes raw images from the `/images` folder to create a searchable `fingerData.pkl` database.
-* **`one.py`**: The "Analyst" – Runs accuracy tests on a `test_images` folder to determine the optimal similarity threshold.
-* **`webVer.py`**: The "Interface" – A Streamlit web app that allows users to upload a fingerprint and see real-time match results and similarity scores.
+* **models.py**: The "Brain" – Loads the MobileOne model and handles image-to-tensor conversion.
+* **datasets.py**: The "Enrollment" – Processes raw images from the `/images` folder to create a searchable `fingerData.pkl` database.
+* **one.py**: The "Analyst" – Runs accuracy tests on a `test_images` folder to determine the optimal similarity threshold.
+* **webVer.py**: The "Interface" – A Streamlit web app that allows users to upload a fingerprint and see real-time match results and similarity scores.
 
 ##  Technical Workflow
 1. **Preprocessing**: Images are normalized via `preprocess.py` (external dependency).
