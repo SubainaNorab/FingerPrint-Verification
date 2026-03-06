@@ -19,7 +19,7 @@ The system includes an evaluation tool (one.py) to test various sensitivity leve
 ## Project Structure
 * **models.py**: The "Brain" – Loads the MobileOne model and handles image-to-tensor conversion.
 * **datasets.py**: The "Enrollment" – Processes raw images from the `/images` folder to create a searchable `fingerData.pkl` database.
-* **one.py**: The "Analyst" – Runs accuracy tests on a `test_images` folder to determine the optimal similarity threshold.
+* **test.py**: The "Analyst" – Runs accuracy tests on a `test_images` folder to determine the optimal similarity threshold.
 * **webVer.py**: The "Interface" – A Streamlit web app that allows users to upload a fingerprint and see real-time match results and similarity scores.
 
 ##  Technical Workflow
