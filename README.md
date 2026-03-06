@@ -5,7 +5,7 @@ This project is a Fingerprint Verification System designed to identify users by 
 The system operates as a Camera-Based Biometric Authenticator. Unlike traditional capacitive scanners found on smartphones, this system is designed to process standard image files (JPG/PNG), making it compatible with high-resolution cameras or webcams.
 
 ### Feature Extraction:
-The system uses the mobileone_s0 architecture, which is optimized for mobile-speed performance while maintaining high accuracy.
+The system uses the mobile one architecture, which is optimized for mobile-speed performance while maintaining high accuracy.
 
 ### Vector Normalization:
 Each fingerprint is converted into a normalized 512-dimensional embedding, ensuring that the "direction" of the fingerprint features is the primary point of comparison.
@@ -14,7 +14,7 @@ Each fingerprint is converted into a normalized 512-dimensional embedding, ensur
 Matches are determined by calculating the dot product between a live "test" embedding and the stored database embeddings.
 
 ### Threshold Management: 
-The system includes an evaluation tool (one.py) to test various sensitivity levels (from 0.6 to 0.9) to find the perfect balance between security and user convenience.
+The system includes an evaluation tool to test various sensitivity levels to find the perfect balance between security and user convenience.
 
 ## Project Structure
 * **models.py**: The "Brain" – Loads the MobileOne model and handles image-to-tensor conversion.
@@ -26,5 +26,5 @@ The system includes an evaluation tool (one.py) to test various sensitivity leve
 1. **Preprocessing**: Images are normalized via `preprocess.py` (external dependency).
 2. **Inference**: Torch-based inference extracts a unique 512-d signature.
 3. **Verification**: The system compares the live signature against the Pickle database.
-4. **Result**: If the score exceeds the defined threshold (e.g., 0.85), the user identity is displayed.
+4. **Result**: If the score exceeds the defined threshold , the user identity is displayed.
 
